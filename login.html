@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="login__container">
+        <form class="login__form" name="formeye" id="formeye" method="">
+            <h2 class="form__head">Login to your account</h2>
+            <div class="login__form--group">
+                <input type="email" placeholder="Email" name="email" id="email" class="login__form--input" required />
+                <img src="./images/form_email.svg" class="login__form--icon" />
+
+            </div>
+            <div class="login__form--group">
+                <input type="password" placeholder="Password" name="paswrd" id="paswrd" class="login__form--input"
+                    required />
+                <img src="./images/form_password.svg" class="login__form--icon" />
+                <img src="./images/eye.svg" id="shwpaswrd" onclick="showPaswrd();pwdIcon()"
+                    class="login__form--icon eye-closed" />
+            </div>
+            <p class="error" id="emailError" style="display: none;"></p>
+            <div class="btn__conatiner">
+                <button type="button" id="loginbtn" name="loginbtn" class="login__form--btn"
+                    onclick="apiCall()">Login</button>
+                <img src="./images/loader.svg" id="btnLoader" class="btn-loader" style="display: none;" />
+            </div>
+        </form>
+    </div>
+    <script src="login.js"></script>
+</body>
+
+</html>
